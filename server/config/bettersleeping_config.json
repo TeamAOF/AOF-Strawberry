@@ -5,7 +5,7 @@
   "formatting": [
     "gold"
   ],
-  "awakeDebuff": true,
+  "awakeDebuff": false,
   "nightsBeforeDebuff": 2,
   "sleepRecovery": true
 }

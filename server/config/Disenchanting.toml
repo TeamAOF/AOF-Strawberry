@@ -5,7 +5,7 @@
 #     All values must be in the range of 0.00 to 10.00, values outside of range will be set to default
 [DisenchantCost]
 	# If LevelMultiplier is set to 0.00, cost will always be 0"
-	LevelMultiplier = 5.0
+	LevelMultiplier = 2.5
 	RarityMultiplier = 0.029999999329447746
 	Offset = 1.600000023841858
 

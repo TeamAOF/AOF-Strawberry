@@ -2,7 +2,7 @@
 	/* If true, the map position's x axis will align 0 to the right
 	   of the screen, increasing towards the left.
 	*/
-	"alignRight": false,
+	"alignRight": true,
 	/* If true, the map position's y axis will align 0 to the bottom
 	   of the screen, increasing towards the top.
 	*/

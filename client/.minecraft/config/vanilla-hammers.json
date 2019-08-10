@@ -3,7 +3,7 @@
   "enableTaterHammer": true,
   "enableFull3x3": false,
   "fullBlockHitbox": false,
-  "alwaysShowSingleBlockHitbox": false,
+  "alwaysShowSingleBlockHitbox": true,
   "showSingleBlockWhenSneaking": true,
   "breakSingleBlockWhenSneaking": true
 }

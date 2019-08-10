@@ -2,7 +2,7 @@
 	"cheating": false,
 	"appendModNames": true,
 	// The ordering of the items on the item panel.
-	"itemListOrdering": "item_groups",
+	"itemListOrdering": "registry",
 	// The ordering of the items on the item panel.
 	"isAscending": true,
 	// To toggle the craftable button next to the search field.
@@ -30,7 +30,7 @@
 	"villagerScreenPermanentScrollBar": false,
 	"darkTheme": false,
 	"registerRecipesInAnotherThread": true,
-	"screenType": "ORIGINAL",
+	"screenType": "UNSET",
 	// The location of choose page dialog, will automatically be set to your last location so there is no need to change this.
 	"choosePageDialogPoint": { 
 		"relativeX": 0.5,

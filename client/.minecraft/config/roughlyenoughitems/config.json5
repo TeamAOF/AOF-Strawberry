@@ -1,5 +1,6 @@
 { 
 	"cheating": false,
+	"appendModNames": true,
 	// The ordering of the items on the item panel.
 	"itemListOrdering": "item_groups",
 	// The ordering of the items on the item panel.
