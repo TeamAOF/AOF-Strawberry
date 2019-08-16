@@ -5,6 +5,7 @@
   "EnableTamedProtection": true,
   "EnableTreeFeller": true,
   "EnableVeinMiner": true,
+  "EnableSentience": true,
   "VeinMinerMaxBreakByLvl": [
     7,
     14,

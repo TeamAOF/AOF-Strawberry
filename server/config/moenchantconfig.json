@@ -5,6 +5,7 @@
   "EnableTamedProtection": true,
   "EnableTreeFeller": true,
   "EnableVeinMiner": true,
+  "EnableSentience": true,
   "VeinMinerMaxBreakByLvl": [
     7,
     14,
@@ -46,6 +47,7 @@
     "io.github.cottonmc.resources.LayeredOreBlock"
   ],
   "AutoSmeltBlackList": [
-    "minecraft:stone"
+    "minecraft:stone",
+    "minecraft:stone_bricks"
   ]
 }

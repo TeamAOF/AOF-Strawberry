@@ -30,7 +30,7 @@
 	"villagerScreenPermanentScrollBar": false,
 	"darkTheme": false,
 	"registerRecipesInAnotherThread": true,
-	"screenType": "UNSET",
+	"screenType": "ORIGINAL",
 	// The location of choose page dialog, will automatically be set to your last location so there is no need to change this.
 	"choosePageDialogPoint": { 
 		"relativeX": 0.5,

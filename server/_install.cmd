@@ -30,11 +30,11 @@ java -jar "fabric-installer-0.5.0.33.jar" server -mcversion "1.14.4" -loader "0.
 
 :noinstall
 
-echo title AOF-STRAWBERRY-1.14.4-2.0.0>"start.cmd"
+echo title AOF-STRAWBERRY-1.14.4-2.3.0>"start.cmd"
 echo java -Xms3072m -Xmx3072m -jar fabric-server-launch.jar nogui>>"start.cmd"
 echo pause>>"start.cmd"
 
-echo title AOF-STRAWBERRY-1.14.4-2.0.0>"start_autorestart.cmd"
+echo title AOF-STRAWBERRY-1.14.4-2.3.0>"start_autorestart.cmd"
 echo :start>>"start_autorestart.cmd"
 echo java -Xms3072m -Xmx3072m -jar fabric-server-launch.jar nogui>>"start_autorestart.cmd"
 echo timeout 10>>"start_autorestart.cmd"
@@ -46,7 +46,9 @@ echo java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar nogui>>start.sh
 
 echo eula=true>"eula.txt"
 
-echo version>"AOF-STRAWBERRY-1.14.4-2.0.0.txt"
+if not exist "server.properties" echo motd=AOF-STRAWBERRY-1.14.4-2.3.0>"server.properties"
+
+echo version>"AOF-STRAWBERRY-1.14.4-2.3.0.txt"
 
 :end
 
