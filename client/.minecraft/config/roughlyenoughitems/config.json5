@@ -2,7 +2,7 @@
 	"cheating": false,
 	"appendModNames": true,
 	// The ordering of the items on the item panel.
-	"itemListOrdering": "item_groups",
+	"itemListOrdering": "registry",
 	// The ordering of the items on the item panel.
 	"isAscending": true,
 	// To toggle the craftable button next to the search field.

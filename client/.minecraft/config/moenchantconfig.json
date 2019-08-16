@@ -46,6 +46,7 @@
     "io.github.cottonmc.resources.LayeredOreBlock"
   ],
   "AutoSmeltBlackList": [
-    "minecraft:stone"
+    "minecraft:stone",
+    "minecraft:stone_bricks"
   ]
 }

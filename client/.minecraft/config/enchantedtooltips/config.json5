@@ -4,9 +4,9 @@
 	// Should the enchant info be displayed on enchanted tools
 	"enableForItems": true,
 	// Display 'Press for info' for enchant info
-	"displayPressForInfo": true,
+	"displayPressForInfo": false,
 	// Always display the Enchant Information
-	"alwaysShowEnchantInfo": false,
+	"alwaysShowEnchantInfo": true,
 	// Display 'Description' in tooltip
 	"displayDescription": true,
 	// Display 'Max level' in tooltip
