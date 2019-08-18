@@ -41,9 +41,6 @@ echo timeout 10>>"start_autorestart.cmd"
 echo echo Crashed? Resuming server...>>"start_autorestart.cmd"
 echo goto start>>"start_autorestart.cmd"
 
-echo #!/usr/bin/env bash>start.sh
-echo java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar nogui>>start.sh
-
 echo eula=true>"eula.txt"
 
 if not exist "server.properties" echo motd=AOF-STRAWBERRY-1.14.4-2.3.0>"server.properties"
