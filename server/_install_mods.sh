@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 cd "$(dirname "$0")" || exit
 mkdir -p mods || exit
 cd mods || exit
