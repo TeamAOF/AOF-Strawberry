@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 INSTALLER_VERSION="0.5.0.33"
 MC_VERSION="1.14.4"
@@ -22,7 +22,7 @@ else
 fi
 
 cat > start.sh <<EOF
-#!/bin/bash
+#!/bin/sh
 
 java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar nogui
 
@@ -30,7 +30,7 @@ read -n1 -r -p "Press any key to continue..."
 EOF
 
 cat > start_autorestart.sh <<EOF
-#!/bin/bash
+#!/bin/sh
 
 while true
 do
