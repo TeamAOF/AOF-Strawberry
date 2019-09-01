@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 INSTALLER_VERSION="0.5.0.33"
 MC_VERSION="1.14.4"
@@ -21,18 +21,26 @@ else
   echo "fabric-server-launch.jar and server.jar found"
 fi
 
-echo "#!/bin/sh" > start.sh
-echo "java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar" nogui >> start.sh
-echo 'read -n1 -r -p "Press any key to continue..."' >> start.sh
+cat > start.sh <<EOF
+#!/bin/sh
 
-echo "#!/bin/sh" > start_autorestart.sh
-echo "while true" >> start_autorestart.sh
-echo "do" >> start_autorestart.sh
-echo "java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar" nogui >> start_autorestart.sh
-echo 'echo "Crashed? Restarting in 10 seconds..."' >> start_autorestart.sh
-echo "sleep 10" >> start_autorestart.sh
-echo "done" >> start_autorestart.sh
-echo 'read -n1 -r -p "Press any key to continue..."' >> start_autorestart.sh
+java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar nogui
+
+read -n1 -r -p "Press any key to continue..."
+EOF
+
+cat > start_autorestart.sh <<EOF
+#!/bin/sh
+
+while true
+do
+  java -Xms2499M -Xmx2500M -jar fabric-server-launch.jar nogui
+  echo "Crashed? Restarting in 10 seconds..."
+  sleep 10
+done
+
+read -n1 -r -p "Press any key to continue..."
+EOF
 
 echo "eula=true" > eula.txt
 
