@@ -2,7 +2,7 @@
 
 An almost Vanilla Minecraft Fabric ModPack (1.14.4)
 
-[Mods List](https://github.com/AllOfFabric/AOF-Strawberry/wiki/AOF-Strawberry-2.3.0-beta)
+[Mods List](https://github.com/AllOfFabric/AOF-Strawberry/wiki/AOF-Strawberry-2.4.0)
 
 Compatible with [Optifabric and Optifine](https://github.com/modmuss50/OptiFabric)
 
