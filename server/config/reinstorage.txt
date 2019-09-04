@@ -1,4 +1,4 @@
 #Minecraft server properties
-#Fri Aug 16 13:21:50 ART 2019
-additional-slots.iron=2
+#Wed Sep 04 12:51:56 ART 2019
 additional-slots.gold=2
+additional-slots.iron=2

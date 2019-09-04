@@ -1,5 +1,8 @@
 { 
 	"generateDefaultPack": true,
 	"forceUpdateDefaultPack": false,
-	"everythingStonecuttable": false
+	"everythingStonecuttable": false,
+	"debugOutput": false,
+	"moreDebugOutput": false,
+	"dumpData": false
 }

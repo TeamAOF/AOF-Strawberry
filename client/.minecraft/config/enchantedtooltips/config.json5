@@ -3,10 +3,14 @@
 	"enableForBooks": true,
 	// Should the enchant info be displayed on enchanted tools
 	"enableForItems": true,
+	// Should the enchant info be displayed in Enchanting Table
+	"enableForEnchantTable": true,
 	// Display 'Press for info' for enchant info
 	"displayPressForInfo": false,
 	// Always display the Enchant Information
 	"alwaysShowEnchantInfo": true,
+	// Display missing enchantment data
+	"displayMissingEnchant": true,
 	// Display 'Description' in tooltip
 	"displayDescription": true,
 	// Display 'Max level' in tooltip

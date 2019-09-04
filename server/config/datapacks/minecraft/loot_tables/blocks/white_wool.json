@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+				  "predicate": {
+				  "item": "minecraft:shears"
+				  }
+                }
+              ],
+			  "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 1.0,
+                    "max": 4.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+			],
+              "name": "minecraft:string"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ],
+              "name": "minecraft:white_wool"
+            }
+          ]
+        }
+      ]
+    }]
+}

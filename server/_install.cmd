@@ -1,58 +1,48 @@
 @echo off
 
-if exist "fabric-installer-0.5.0.33.jar" goto nodownload
+set INSTALLER_VERSION=0.5.0.33
+set MC_VERSION=1.14.4
+set LOADER_VERSION=0.6.1+build.164
+set JAVA_PARAMS=-Xms3G -Xmx3G -XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:MaxGCPauseMillis=100 -XX:+DisableExplicitGC -XX:TargetSurvivorRatio=90 -XX:G1NewSizePercent=50 -XX:G1MaxNewSizePercent=80 -XX:G1MixedGCLiveThresholdPercent=35 -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled
+set PACK_NAME=AOF-STRAWBERRY-1.14.4-2.4.0
 
-echo downloading installer...
+if not exist "fabric-installer-%INSTALLER_VERSION%.jar" curl --progress-bar -o "fabric-installer-%INSTALLER_VERSION%.jar" "https://maven.fabricmc.net/net/fabricmc/fabric-installer/%INSTALLER_VERSION%/fabric-installer-%INSTALLER_VERSION%.jar"
 
-curl --progress-bar -o "fabric-installer-0.5.0.33.jar" "https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.5.0.33/fabric-installer-0.5.0.33.jar"
+set doinstall=false
 
-:nodownload
+if not exist "fabric-server-launch.jar" set doinstall=true
 
-if not exist "fabric-installer-0.5.0.33.jar" goto end
+if not exist "server.jar" set doinstall=true
 
-echo installer found
+if not exist "fabric-installer-%INSTALLER_VERSION%.jar" set doinstall=false
 
-if not exist "fabric-server-launch.jar" goto install
+if %doinstall% == true java -jar "fabric-installer-%INSTALLER_VERSION%.jar" server -mcversion "%MC_VERSION%" -loader "%LOADER_VERSION%" -downloadMinecraft
 
-echo fabric-server-launch.jar found
-
-if not exist "server.jar" goto install
-
-echo server.jar found
-
-goto noinstall
-
-:install
-
-echo run installer
-
-java -jar "fabric-installer-0.5.0.33.jar" server -mcversion "1.14.4" -loader "0.4.8+build.159" -downloadMinecraft
-
-:noinstall
-
-echo title AOF-STRAWBERRY-1.14.4-2.3.0>"start.cmd"
-echo java -Xms3072m -Xmx3072m -jar fabric-server-launch.jar nogui>>"start.cmd"
+echo title %PACK_NAME%>"start.cmd"
+echo java %JAVA_PARAMS% -jar fabric-server-launch.jar nogui>>"start.cmd"
 echo pause>>"start.cmd"
 
-echo title AOF-STRAWBERRY-1.14.4-2.3.0>"start_autorestart.cmd"
+echo title %PACK_NAME%>"start_autorestart.cmd"
 echo :start>>"start_autorestart.cmd"
-echo java -Xms3072m -Xmx3072m -jar fabric-server-launch.jar nogui>>"start_autorestart.cmd"
+echo java %JAVA_PARAMS% -jar fabric-server-launch.jar nogui>>"start_autorestart.cmd"
 echo timeout 10>>"start_autorestart.cmd"
 echo echo Crashed? Resuming server...>>"start_autorestart.cmd"
 echo goto start>>"start_autorestart.cmd"
 
 echo eula=true>"eula.txt"
 
-if not exist "server.properties" echo motd=AOF-STRAWBERRY-1.14.4-2.3.0>"server.properties"
+if not exist "server.properties" (
+  echo motd=%PACK_NAME%>"server.properties"
+  echo level-type=default>>"server.properties"
+  echo difficulty=hard>>"server.properties"
+)
 
-echo version>"AOF-STRAWBERRY-1.14.4-2.3.0.txt"
+echo version>"%PACK_NAME%.txt"
 
-:end
+if not exist "fabric-installer-%INSTALLER_VERSION%.jar" echo ERROR! fabric-installer-%INSTALLER_VERSION%.jar NOT FOUND
 
-if not exist "fabric-installer-0.5.0.33.jar" echo ERROR: fabric-installer.jar NOT FOUND
+if not exist "fabric-server-launch.jar" echo ERROR! fabric-server-launch.jar NOT FOUND
 
-if not exist "fabric-server-launch.jar" echo ERROR: fabric-server-launch.jar NOT FOUND
-
-if not exist "server.jar" echo ERROR: server.jar NOT FOUND
+if not exist "server.jar" echo ERROR! server.jar NOT FOUND
 
 pause

@@ -1,0 +1,3 @@
+autoJump:false
+lastServer:
+resourcePacks:["vanilla","file/aofstrawberry"]

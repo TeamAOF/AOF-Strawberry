@@ -9,5 +9,7 @@
 	"sortPlayer": false,
 	// Method of sorting, NAME,CATEGORY,MOD
 	"sortType": "NAME",
+	// Display Sort Button Tooltip
+	"displayTooltip": true,
 	"debugMode": false
 }
