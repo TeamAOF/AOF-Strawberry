@@ -10,8 +10,10 @@ Download the latest version [here](https://github.com/AllOfFabric/AOF-Strawberry
 
 The server zip file is a ready to install server instance:
 
-- Run `_install.cmd` to download and generate the server files
-- Run `_install_mods.cmd` to download the mod jars to the server mods folder
+- Run `_install.cmd` to download and generate the server files (`_install.sh` on linux)
+- Run `_install_mods.cmd` to download the mod jars to the server mods folder (`_install_mods.sh` on linux)
+
+You can edit the generated server.properties file and change `level-type=default` to `level-type=climatic` to generate a world using the [Climatic World Type](https://www.curseforge.com/minecraft/mc-mods/climatic-world-type).
 
 The client zip file is a MultiMC instance, just add a new instance, "Import from zip", paste the zip URL
 
