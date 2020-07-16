@@ -8,11 +8,6 @@ A selection of Fabric mods swirled with the creamy, smooth vanilla Minecraft, al
 
 For a list of included mods see here: https://github.com/TeamAOF/AOF-Strawberry/wiki
 
-The server zip file is a ready to install a server instance:
 
-- Run `_install.cmd` to download and generate the server files (`_install.sh` on linux)
-- Run `_install_mods.cmd` to download the mod jars to the server mods folder (`_install_mods.sh` on linux)
-
-Set `level-type=ecotones` in `server.properties` to generate an world using https://www.curseforge.com/minecraft/mc-mods/ecotones
 
 
